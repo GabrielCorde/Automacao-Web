@@ -1,14 +1,4 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[75]:
-
-
 #!pip install selenium
-
-
-# In[76]:
-
 
 # baixar selenuim (!pip install selenium) para automatizar o navegador
 # baixar o chromedrive no google e colocar na pasta onde o python esta.
@@ -22,20 +12,11 @@ from selenium import webdriver
 navegador = webdriver.Chrome()
 navegador.get('https://www.google.com.br/')
 
-
-
-# In[77]:
-
-
 # Passo 2: Importar a base de dados
 import pandas as pd
 
 tabela = pd.read_excel('commodities.xlsx')
 display(tabela)
-
-
-# In[78]:
-
 
 # navegador.send_kays('meu nome é lira') > escrever nele
     # ''       .click() > clicar nele
@@ -67,11 +48,6 @@ for linha in tabela.index:
 
 # Passo 3: Para cada produto da nossa base
 
-
-
-# In[79]:
-
-
 # Passo 4:  Pegar o preço atual do produto
 # Passo 5: Atualizar o preço na base de dados
 # Passo 6: Decidir quais produtos a gente vai comprar
@@ -79,10 +55,6 @@ display(tabela)
 
 tabela['Comprar'] = tabela['Preço Atual'] < tabela['Preço Ideal']
 display(tabela)
-
-
-# In[80]:
-
 
 # Passo 7: Exportar a base de dados atualizada
 
